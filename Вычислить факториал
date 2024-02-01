@@ -1,0 +1,44 @@
+Console.WriteLine("Введите свое имя");
+var NameFaml = Console.ReadLine();
+bool Check = false;
+while (Check == false)
+{ 
+    var Idiot1 = double.TryParse(NameFaml , out var Idiot2);
+    if (Idiot1)
+    {
+       Console.WriteLine("Повторить! Введите свое имя или набор букв, вместо чисел!");
+       NameFaml = Console.ReadLine();
+    }
+    else
+    {
+    Console.WriteLine($"Здравствуйте {{0}}", NameFaml);
+    Check = true;
+    }
+}
+
+Check = false;
+var ChanceFailstr = Console.ReadLine();
+int ChanceFail = 0;
+while (Check == false)
+{
+    var Idiot1 = int.TryParse(ChanceFailstr, out ChanceFail);
+    if (Idiot1)
+    {
+        
+        Check = true;
+    }
+    else
+    {
+        Console.WriteLine($"Да давай нормально {{0}}", NameFaml);
+        ChanceFailstr = Console.ReadLine();
+    }
+}
+
+var c = 1;
+for (var i = 1; i <= ChanceFail; i++)
+{
+    c *= i;
+    Console.WriteLine($"{c}");
+
+}
+Console.WriteLine($"Если перевести в факториал ваше число, то будет: '{c}'");
