@@ -1,0 +1,50 @@
+
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+Console.WriteLine("Wow, Such wow");
+var Ima = int.MaxValue;
+var Imi = int.MinValue;
+var uintMa = uint.MaxValue;
+var uintMi = uint.MinValue;
+var LoMa = long.MaxValue;
+var LoMi = long.MinValue;
+var uLMa = ulong.MaxValue;
+var uLMi = ulong.MinValue;
+var ShoMa = short.MaxValue;
+var ShoMi = short.MinValue;
+var UshoMa = ushort.MaxValue;
+var UshoMi = ushort.MinValue;
+var fMa = float.MaxValue;
+var fmi = float.MinValue;
+var dma = decimal.MaxValue;
+var dmi = decimal.MinValue;
+var byMa = byte.MaxValue;
+var byMi = byte.MinValue;
+var DoMa = double.MaxValue;
+var DoMi = double.MinValue;
+
+var form1 = Math.Max(UshoMa.ToString().Length, ShoMa.ToString().Length);
+var form2 = Math.Max(dma.ToString().Length, Ima.ToString().Length);
+var form3 = Math.Max(byMa.ToString().Length, uintMa.ToString().Length);
+var form4 = Math.Max(LoMa.ToString().Length, uLMa.ToString().Length);
+var form5 = Math.Max(fMa.ToString().Length, DoMa.ToString().Length);
+
+var Max4 = Math.Max(Math.Max(Math.Max(form1, form2), Math.Max(form3, form4)), form5);
+//var Max1 = Math.Max(form1, form2);
+//var max2 = Math.Max(form3, form4);
+
+//var Max3 = Math.Max(form5, max2);
+//var Max4 = Math.Max(Max1, Max3);
+
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", "Maximum", "Minimum");
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", byMa, byMi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", ShoMa, ShoMi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", UshoMa, UshoMi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", Ima, Imi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", uintMa, uintMi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", LoMa, LoMi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", uLMa, uLMi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", fMa, fmi);
+Console.WriteLine($"{{0,{-Max4}}} {{1}}", DoMa, DoMi);
+Console.WriteLine($"{{0,{Max4}}} {{1}}", dma, dmi);
+
